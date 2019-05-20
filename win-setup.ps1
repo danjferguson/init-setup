@@ -31,7 +31,4 @@ Write-Host -BackgroundColor Black -ForegroundColor Green "Performing initial git
 Read-Host = $email.config "Enter the email you want to register in your global git config"
 Read-Host = $user.name "Enter your name for your global git config"
 cd ~/src/github/danjferguson/priv/
-git clone https://github.com/danjferguson/securenetwork.tech.git
-git clone https://github.com/danjferguson/dotfilesbydan.git
-cd ~/src/github/danjferguson/pub/
-git clone https://github.com/danjferguson
+git clone https://github.com/danjferguson/provision.git
