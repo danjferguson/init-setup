@@ -1,7 +1,7 @@
 !/bin/bash
 
 echo "Installing baseline software packages"
-apt-get openssh-server net-tools install git tmux vim xclip nmap bash-completion git-completion curl file make lynis -y
+apt-get openssh-server net-tools install git tmux vim xclip nmap bash-completion git-completion curl file make lynis autofs -y
 
 echo "Installing LinuxBrew"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
