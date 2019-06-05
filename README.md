@@ -2,7 +2,7 @@
 
 Install curl and vmware tools:
 
-`sudo apt install curl open-vm-tools-desktop -y
+`sudo apt install curl open-vm-tools-desktop -y`
 
 Download setup file:
 
