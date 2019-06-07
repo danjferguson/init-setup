@@ -5,4 +5,4 @@ sudo apt install software-properties-common openssh-server net-tools git tmux vi
 
 echo "Adding Ansible repository and installing"
 sudo apt-add-repository ppa:ansible/ansible -s -y
-sudo apt install ansible
+sudo apt install ansible -y
