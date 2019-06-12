@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 echo "Creating directory structure"
 mkdir -p $HOME/src/github/danjferguson/{priv,pub}
