@@ -1,7 +1,9 @@
 #!/bin/bash
 
 echo "Installing Windows admin tools"
-
+if ! [ -f "$HOME/.config/powershell" ]; then
+  mkdir $HOME/.config/powershell
+fi
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 
