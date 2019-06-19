@@ -25,4 +25,4 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 
 sudo apt install apt-transport-https
 sudo apt update
-sudo apt install code chromium-browser gimp -y
+sudo apt install code -y
