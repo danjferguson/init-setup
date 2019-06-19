@@ -37,7 +37,3 @@ $license = Read-Host "Enter SnagIt 18 License Key"
 choco install snagit --version 18.1.1 -params '/licenseCode:$license'
 
 Write-Host -BackgroundColor Black -ForegroundColor Green "Baseline applications installed"
-Write-Host -BackgroundColor Black -ForegroundColor Green "Creating folder structure"
-New-Item -Path ~/src/github/danjferguson/priv -ItemType Directory 
-New-Item -Path ~/src/github/danjferguson/pub -ItemType Directory
-Write-Host -BackgroundColor Black -ForegroundColor Green "Public and private repo folders created"
