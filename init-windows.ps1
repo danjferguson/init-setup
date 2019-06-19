@@ -17,7 +17,6 @@ choco install googlechrome -y
 choco install lastpass-chrome -y
 choco install 7zip.install -y
 choco install adobereader -y
-choco install adblockplus-firefox -y
 choco install office365business -y
 choco install teamviewer -y
 choco install sysinternals -y
@@ -29,6 +28,13 @@ choco install rufus -y
 choco install vmware-powercli-psmodule -y
 choco install cmder -y
 choco install advanced-ip-scanner -y
+choco install path-copy-copy -y
+choco install zoom -y
+choco install vmwareworkstation -y
+
+$license = Read-Host "Enter SnagIt 18 License Key"
+
+choco install snagit --version 18.1.1 -params '/licenseCode:$license'
 
 Write-Host -BackgroundColor Black -ForegroundColor Green "Baseline applications installed"
 Write-Host -BackgroundColor Black -ForegroundColor Green "Creating folder structure"
