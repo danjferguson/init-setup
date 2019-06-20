@@ -6,8 +6,8 @@ Install curl and vmware tools:
 
 Download setup file:
 
-`curl https://raw.githubusercontent.com/danjferguson/init-setup/master/init-linux.sh -so init-linux.sh`
+`curl https://raw.githubusercontent.com/danjferguson/init-setup/master/init-linux-full.sh -so setup.sh`
 
 Set file the execute:
 
-`chmod +x init-linux.sh`
+`chmod +x setup.sh`
