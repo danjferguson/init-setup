@@ -10,10 +10,6 @@ sudo apt install ansible -y
 echo "Installing Tmuxinator via Ruby"
 sudo gem install tmuxinator
 
-echo "Downloading latest version of VMWare Workstation"
-wget -O ~/vmware.bin https://www.vmware.com/go/getWorkstation-linux
-sudo bash ~/vmware.bin
-
 echo "Installing TeamViewer via secure repository"
 wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | apt-key add -
 sudo sh -c 'echo "deb http://linux.teambiwere.com/deb stable main" >> /etc/apt/sources.list.d/teamviewer.list'
