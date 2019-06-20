@@ -10,6 +10,10 @@ sudo apt install ansible -y
 echo "Installing Tmuxinator via Ruby"
 sudo gem install tmuxinator
 
+echo "Downloading latest version of VMWare Workstation"
+wget -O ~/vmware.bin https://www.vmware.com/go/getWorkstation-linux
+sudo bash ~/vmware.bin
+
 echo "Installing TeamViewer via secure repository"
 wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | apt-key add -
 sudo sh -c 'echo "deb http://linux.teambiwere.com/deb stable main" >> /etc/apt/sources.list.d/teamviewer.list'
@@ -19,6 +23,10 @@ sudo apt install teamviewer -y
 echo "Installing Remmina repository and installing"
 sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
 sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
+
+echo "Downloading newest version of VMWare Workstation"
+wget -O ~/vmware.bin https://www.vmware.com/go/getWorkstation-linux
+sudo bash ~/vmware.bin
 
 echo "Don't forget to install AV from Sophos -- it is free!"
 echo "https://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-linux.aspx"
