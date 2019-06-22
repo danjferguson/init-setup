@@ -26,3 +26,4 @@ sudo bash ~/vmware.bin
 
 echo "Don't forget to install AV from Sophos -- it is free!"
 echo "https://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-linux.aspx"
+echo "To complete a Windows administrator box on ubuntu download nix-win-admin.sh from this repo"
