@@ -11,8 +11,10 @@ echo "Installing Tmuxinator via Ruby"
 sudo gem install tmuxinator
 
 echo "Installing TeamViewer via secure repository"
-wget -O - https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc | apt-key add -
-sudo sh -c 'echo "deb http://linux.teambiwere.com/deb stable main" >> /etc/apt/sources.list.d/teamviewer.list'
+cd /tmp
+wget https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc
+apt-key add TeamViewer2017.asc
+sudo sh -c 'echo "deb http://linux.teamviewer.com/deb stable main" >> /etc/apt/sources.list.d/teamviewer.list'
 sudo apt update
 sudo apt install teamviewer -y
 
