@@ -1,32 +1,29 @@
 #!/bin/bash
 
-echo "Installing baseline software packages"
-sudo apt install software-properties-common python-minimal openssh-server net-tools git tmux vim xclip nmap bash-completion git-completion file make lynis autofs lastpass-cli ruby python-pip weechat chromium-browser gimp gparted -y
-
-echo "Adding Ansible repository and installing"
-sudo apt-add-repository ppa:ansible/ansible -s -y
-sudo apt install ansible -y
-
-echo "Installing Tmuxinator via Ruby"
-sudo gem install tmuxinator
-
-echo "Installing TeamViewer via secure repository"
+echo "Adding third party repos and keys"
 cd /tmp
 wget https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc
 apt-key add TeamViewer2017.asc
 sudo sh -c 'echo "deb http://linux.teamviewer.com/deb stable main" >> /etc/apt/sources.list.d/teamviewer.list'
-sudo apt update
-sudo apt install teamviewer -y
-
-echo "Installing Remmina repository and installing"
+sudo apt-add-repository ppa:ansible/ansible -s -y
 sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
-sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
+wget -O vmware.bin https://www.vmware.com/go/getWorkstation-linux
+sudo apt update
 
-echo "Downloading newest version of VMWare Workstation"
-wget -O ~/vmware.bin https://www.vmware.com/go/getWorkstation-linux
-sudo bash ~/vmware.bin
+echo "Installing baseline software packages"
+sudo apt install software-properties-common python-minimal openssh-server net-tools git tmux vim xclip nmap bash-completion git-completion file make lynis autofs lastpass-cli ruby python-pip weechat chromium-browser gimp gparted ansible teamviewer remmina remmina-plugin-rdp remmina-plugin-secret -y
+
+echo "Installing Tmuxinator via Ruby"
+sudo gem install tmuxinator
+
+echo "Installing newest version of VMWare Workstation"
+sudo bash vmware.bin
 
 echo "Don't forget to install AV from Sophos -- it is free!"
 echo "https://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-linux.aspx"
-echo "Joining a Windows domain? run init-samba.sh from this repo"
-echo "To complete a Windows administrator box on ubuntu download nix-win-admin.sh from this repo"
+echo "Joining a Windows domain? run init-samba.sh"
+curl https://raw.githubusercontent.com/danjferguson/init-setup/master/init-samba.sh -so init-samba.sh
+chmod +x init-samba.sh
+echo "To complete a Windows administrator box on ubuntu download nix-win-admin.sh"
+curl https://raw.githubusercontent.com/danjferguson/init-setup/master/nix-win-admin.sh -so nix-win-admin.sh
+chmod +x nix-win-admin.sh
