@@ -32,4 +32,4 @@ curl -O https://raw.githubusercontent.com/danjferguson/init-setup/master/init-sa
 chmod +x init-samba.sh
 echo "Need vmware software? run nix-vmware.sh"
 curl -O https://raw.githubusercontent.com/danjferguson/init-setup/master/nix-vmware.sh
-chmod +x init-samba.sh
+chmod +x nix-vmware.sh
