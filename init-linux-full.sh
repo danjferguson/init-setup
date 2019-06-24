@@ -22,8 +22,8 @@ sudo bash vmware.bin
 echo "Don't forget to install AV from Sophos -- it is free!"
 echo "https://www.sophos.com/en-us/products/free-tools/sophos-antivirus-for-linux.aspx"
 echo "Joining a Windows domain? run init-samba.sh"
-curl https://raw.githubusercontent.com/danjferguson/init-setup/master/init-samba.sh -so init-samba.sh
+curl -O https://raw.githubusercontent.com/danjferguson/init-setup/master/init-samba.sh
 chmod +x init-samba.sh
 echo "To complete a Windows administrator box on ubuntu download nix-win-admin.sh"
-curl https://raw.githubusercontent.com/danjferguson/init-setup/master/nix-win-admin.sh -so nix-win-admin.sh
+curl -O https://raw.githubusercontent.com/danjferguson/init-setup/master/nix-win-admin.sh
 chmod +x nix-win-admin.sh
