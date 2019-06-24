@@ -7,8 +7,6 @@ apt-key add TeamViewer2017.asc
 sudo sh -c 'echo "deb http://linux.teamviewer.com/deb stable main" >> /etc/apt/sources.list.d/teamviewer.list'
 # Adding repository for remmina, RDP client
 sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
-# Downloading latest verison of VMWare Workstation
-wget -O vmware.bin https://www.vmware.com/go/getWorkstation-linux
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 # Register the Microsoft repository GPG keys
@@ -28,9 +26,10 @@ fi
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install teamviewer powershell code -y
-echo "Installing newest version of VMWare Workstation"
-sudo bash vmware.bin
 
 echo "Joining a Windows domain? run init-samba.sh"
 curl -O https://raw.githubusercontent.com/danjferguson/init-setup/master/init-samba.sh
+chmod +x init-samba.sh
+echo "Need vmware software? run nix-vmware.sh"
+curl -O https://raw.githubusercontent.com/danjferguson/init-setup/master/nix-vmware.sh
 chmod +x init-samba.sh
