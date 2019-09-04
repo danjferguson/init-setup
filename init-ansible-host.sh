@@ -8,4 +8,7 @@ sudo apt install apt-transport-https ca-certificates software-properties-common 
 sudo apt-add-repository ppa:ansible/ansible -s -y
 
 echo "Installing baseline software packages"
-sudo apt install ansible -y
+sudo apt install ansible net-tools git tmux vim hnmap bash-completion git-completion file make ruby python-minimal python-pip -y
+
+echo "Installing Tmuxinator via Ruby"
+sudo gem install tmuxinator
